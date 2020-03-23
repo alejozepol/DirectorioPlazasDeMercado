@@ -1,0 +1,12 @@
+{
+  "name": "DirectorioPlazasDeMercado",
+  "version": "1.0.0",
+  "description": "Directorio de los contactos recolectados por el IPES que estan en las diferentes plazas de mercado en la ciudad de Bogotá",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["plaza", "mercado", "Bogota", "frutas", "verguras", "leche"],
+  "author": "Alejandro López",
+  "license": "ISC"
+}
