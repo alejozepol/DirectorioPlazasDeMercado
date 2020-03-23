@@ -1,8 +1,7 @@
-$color-claro-primario: #fcfcfc;
-$color-claro-contraste: #f4f4f4;
+$color-claro: #fcfcfc;
 $color-oscuro: #202020;
-$color-primario: #ff6917;
-$color-segundario: #ff293e;
+$color-primario: #138a0f;
+$color-segundario: #73d870;
 $color-aceptar: #00D362;
 $color-cancelar: #DB0606;
 $color-info: #2DB6FF;
@@ -25,9 +24,9 @@ body{
 }
 
 @mixin sombraClara {
-  -webkit-box-shadow: $size-sombra fade-out($color-claro-primario, $opacity);
-  -moz-box-shadow: $size-sombra fade-out($color-claro-primario, $opacity);
-  box-shadow: $size-sombra fade-out($color-claro-primario, $opacity);
+  -webkit-box-shadow: $size-sombra fade-out($color-claro, $opacity);
+  -moz-box-shadow: $size-sombra fade-out($color-claro, $opacity);
+  box-shadow: $size-sombra fade-out($color-claro, $opacity);
 }
 
 @mixin sombraPrimario {
@@ -112,7 +111,7 @@ p{
 }
 
 
-@each $header, $size in (h2: 50px, h3: 41px, h4:30px, h5:20px, h6:18px, p:16px) {
+@each $header, $size in (h1: 40px, h2: 35px, h3: 30px, h4:25px, h5:20px, h6:18px, p:16px) {
   #{$header} {
         font-size: $size;
         margin: 0;

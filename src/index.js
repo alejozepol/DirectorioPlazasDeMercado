@@ -8,7 +8,7 @@ import './assets/css/index.scss';
 
 const composeEnhacers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const initialState = {
-  Establecimiento: [
+  establecimientos: [
     {
       id: 1,
       nombre: '20 de Julio',
@@ -100,7 +100,7 @@ const initialState = {
       ciudad: 'Bogotá',
     },
   ],
-  Producto: [
+  productos: [
     {
       id: 1,
       Nombre: 'Salsamentaría',
@@ -195,5 +195,5 @@ ReactDom.render(
   <Provider store={store}>
     <App />
   </Provider>,
-  document.getElementById('app'),
+  document.getElementById('app')
 );

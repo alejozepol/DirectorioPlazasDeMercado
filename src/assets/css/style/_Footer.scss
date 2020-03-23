@@ -6,7 +6,7 @@ footer{
   justify-content: center;
   justify-items: center;
   position: relative;
-  color: $color-claro-primario;
+  color: $color-claro;
   padding: 20px;
   @include degragadoColor;
   & > p{
@@ -14,18 +14,13 @@ footer{
     text-align: center;
   }
   & > h6{
-    border-top: 1px solid fade-out($color-claro-primario, $opacity);
+    border-top: 1px solid fade-out($color-claro, $opacity);
     width: -webkit-fill-available;
     text-align: center;
     align-self: flex-end;
     padding: 1%;
   }
 }
-
-.Fotter-logo{
- 
-}
-
 .Footer-bg{
   position: absolute;
   z-index: -4;
