@@ -1,0 +1,44 @@
+footer{
+  background-size: cover;
+  height: 40vh;
+  margin-top: 10%;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  position: relative;
+  color: $color-claro-primario;
+  padding: 20px;
+  @include degragadoColor;
+  & > p{
+    width: 40%;
+    text-align: center;
+  }
+  & > h6{
+    border-top: 1px solid fade-out($color-claro-primario, $opacity);
+    width: -webkit-fill-available;
+    text-align: center;
+    align-self: flex-end;
+    padding: 1%;
+  }
+}
+
+.Fotter-logo{
+ 
+}
+
+.Footer-bg{
+  position: absolute;
+  z-index: -4;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 619px) {
+  footer{
+    height: 100%;
+    & > p{
+      width: 60%;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+header{
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  & > img {
+    height: 5rem;;
+  }
+  & > h1 {
+    display: none;
+  }
+}
+
+@media (max-width: 619px) {
+  header{
+    margin-top: 8%;
+  }
+}
