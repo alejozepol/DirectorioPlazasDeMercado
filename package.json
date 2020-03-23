@@ -2,7 +2,7 @@
   "name": "DirectorioPlazasDeMercado",
   "version": "1.0.0",
   "description": "Directorio de los contactos recolectados por el IPES que estan en las diferentes plazas de mercado en la ciudad de Bogotá",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "build": "webpack --mode production",
     "start": "webpack-dev-server --open --mode development"
@@ -44,5 +44,13 @@
     "leche"
   ],
   "author": "Alejandro López",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alejozepol/DirectorioPlazasDeMercado.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alejozepol/DirectorioPlazasDeMercado.git/issues"
+  },
+  "homepage": "https://github.com/alejozepol/DirectorioPlazasDeMercado.git#readme"
 }

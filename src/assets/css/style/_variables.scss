@@ -1,0 +1,129 @@
+$color-claro-primario: #fcfcfc;
+$color-claro-contraste: #f4f4f4;
+$color-oscuro: #202020;
+$color-primario: #ff6917;
+$color-segundario: #ff293e;
+$color-aceptar: #00D362;
+$color-cancelar: #DB0606;
+$color-info: #2DB6FF;
+$color-degradado: to bottom, $color-primario 0%, $color-segundario 100%;
+$size-sombra: 3px 2px 10px 2px;
+$opacity: 0.8;
+$font-primaria: 'Poppins', sans-serif;
+$font-size-primaria: 12px;
+
+body{
+  margin: 0;
+  font-family: $font-primaria;
+  color: $color-oscuro;
+}
+
+@mixin sombraOscura {
+  -webkit-box-shadow: $size-sombra fade-out($color-oscuro, $opacity);
+  -moz-box-shadow: $size-sombra fade-out($color-oscuro, $opacity);
+  box-shadow: $size-sombra fade-out($color-oscuro, $opacity);
+}
+
+@mixin sombraClara {
+  -webkit-box-shadow: $size-sombra fade-out($color-claro-primario, $opacity);
+  -moz-box-shadow: $size-sombra fade-out($color-claro-primario, $opacity);
+  box-shadow: $size-sombra fade-out($color-claro-primario, $opacity);
+}
+
+@mixin sombraPrimario {
+  -webkit-box-shadow: $size-sombra fade-out($color-primario, $opacity);
+  -moz-box-shadow: $size-sombra fade-out($color-primario, $opacity);
+  box-shadow: $size-sombra fade-out($color-primario, $opacity);
+}
+
+@mixin degragadoColor {
+  background: $color-primario;
+  background: -moz-linear-gradient($color-degradado);
+  background: -webkit-gradient(to bottom, color-stop(0%, $color-primario), color-stop(100%, $color-segundario));
+  background: -webkit-linear-gradient($color-degradado);
+  background: -o-linear-gradient($color-degradado);
+  background: -ms-linear-gradient($color-degradado);
+  background: linear-gradient($color-degradado);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color-primario', endColorstr='$color-segundario', GradientType=0 );
+}
+
+
+@mixin styleScroll {
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 30px;
+    width: 2px;
+    height: 2px;
+    background: fade-out($color-primario, 0.8);
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    display: block;
+    box-shadow: 0 0 2px 1px fade-out($color-primario, 0.5);
+    background: $color-primario;
+  }
+}
+
+@mixin styleScrollX {
+  overflow-x: scroll;
+  &::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 30px;
+    width: 2px;
+    height: 2px;
+    background: fade-out($color-oscuro, $opacity);
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    display: block;
+    box-shadow: 0 0 2px 1px fade-out($color-primario, 0.5);
+    background: $color-primario;
+  }
+}
+
+a{
+  text-decoration: none;
+  color: $color-oscuro;
+}
+p{
+  margin: 0%;
+}
+
+.styleText {
+  &-bold {
+    font-weight: 700;
+  }
+  &-lightItalic{
+    font-weight: 400;
+    font-style: italic;
+  }
+
+}
+
+.text{
+  &-primario{
+    color: $color-primario;
+  }
+}
+
+
+@each $header, $size in (h2: 50px, h3: 41px, h4:30px, h5:20px, h6:18px, p:16px) {
+  #{$header} {
+        font-size: $size;
+        margin: 0;
+  }
+};
+
+@media (max-width: 992px) {
+  @each $header, $size in (h2: 50px, h3: 30px, h4:20px, h5:18px, h6:14px, p:14px) {
+    #{$header} {
+          font-size: $size;
+          margin: 0;
+    }
+  };
+}
