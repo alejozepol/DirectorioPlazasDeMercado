@@ -1,6 +1,14 @@
+.content-Card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: space-between;
+}
+
 .Card{
-  width: 100%;
-  margin: 2px;
+  justify-self: center;
+  width: 90%;
+  margin: 5px;
   &__header{
      display: grid;
      background-color: $color-segundario;
@@ -8,6 +16,7 @@
      grid-template-areas: 
      "icon title"
      "icon address";
+     grid-template-columns: 20% 80%;
      &-icon{
        grid-area: icon;
        width: 100%;
@@ -25,11 +34,10 @@
      }
   }
   &__Map{
-    margin: 2%;
     & > div:first-child{
       position: relative !important;
       height: 10rem !important;
-      width: 80vw !important;
+      width: 100% !important;
     }
   }
 }

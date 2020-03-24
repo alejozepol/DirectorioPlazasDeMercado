@@ -50,14 +50,14 @@ body{
 @mixin styleScroll {
   overflow-y: scroll;
   &::-webkit-scrollbar {
-    width: 2px;
-    height: 2px;
+    width: 5px;
+    height: 5px;
   }
   &::-webkit-scrollbar-thumb {
     border-radius: 30px;
-    width: 2px;
-    height: 2px;
-    background: fade-out($color-primario, 0.8);
+    width: 5px;
+    height: 5px;
+    background: $color-primario;
   }
   &::-webkit-scrollbar-thumb:hover {
     display: block;
