@@ -4,17 +4,17 @@ import Footer from '../components/footer';
 
 const Layout = ({ children, location }) => {
   return (
-    <section className='Layout'>
-      <header className='Layout__header'>
+    <>
+      <header>
         <Header dir={location.pathname} />
       </header>
-      <div className='Layout__contenido'>
+      <main className='Layout__contenido'>
         {children}
-      </div>
-      <div className='Layout__footer'>
+      </main>
+      <footer>
         <Footer dir={location.pathname} />
-      </div>
-    </section>
+      </footer>
+    </>
   );
 };
 

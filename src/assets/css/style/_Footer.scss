@@ -1,13 +1,12 @@
 footer{
+  grid-area: footer;
   background-size: cover;
   height: 40vh;
-  margin-top: 10%;
   display: grid;
   justify-content: center;
   justify-items: center;
   position: relative;
   color: $color-claro;
-  padding: 20px;
   @include degragadoColor;
   & > p{
     width: 40%;

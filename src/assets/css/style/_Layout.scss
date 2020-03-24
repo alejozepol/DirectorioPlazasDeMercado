@@ -1,32 +1,16 @@
-.Layout {
-  position: absolute;
-  top: 0%;
-  bottom: 0%;
-  left: 0%;
-  right: 0%;
+#app{
   min-height: 100vh;
   max-height: 100vh;
   display: grid;
   grid-template-rows: 8% 84% 8%;
-  grid-template-columns: 10% 80% 10%;
+  grid-template-columns: 100%;
   grid-template-areas:
-    "header header header"
-    ". content ."
-    "footer footer footer";
-  &__header {
-    grid-area: header;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  &__contenido {
-    grid-area: content;
-    @include styleScroll;
-  }
-  &__footer {
-    grid-area: footer;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
+    "header"
+    "content"
+    "footer";
+}
+main {
+  grid-area: content;
+  justify-self: center;
+  @include styleScroll;
 }

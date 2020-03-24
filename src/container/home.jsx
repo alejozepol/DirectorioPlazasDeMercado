@@ -6,11 +6,11 @@ import iconStore from '../assets/store.svg';
 const Home = (props) => {
   const { establecimientos } = props;
   return (
-    <section className='Home'>
+    <>
       {
         establecimientos.map((item) => (
-          <div className='Card Card-Map'>
-            <div className='Card__header' key={item.id}>
+          <div className='Card Card-Map' key={item.id}>
+            <div className='Card__header'>
               <img className='Card__header-icon' src={iconStore} alt='Icono Tienda' />
               <h3 className='Card__header-title'>{item.nombre}</h3>
               <h5 className='Card__header-address'>{item.direccion}</h5>
@@ -21,7 +21,7 @@ const Home = (props) => {
           </div>
         ))
       }
-    </section>
+    </>
   );
 };
 

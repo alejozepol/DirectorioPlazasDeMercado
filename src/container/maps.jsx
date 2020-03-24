@@ -31,7 +31,7 @@ const Maps = ({ _lat, _lng, name }) => {
       initialCenter={{ lat: _lat, lng: _lng }}
       onClick={onMapClicked}
     >
-      <Marker onClick={onMarkerClick} title={name} position={{ lat: _lat, lng: _lng }} />
+      <Marker onClick={onMarkerClick} name={name} title={name} position={{ lat: _lat, lng: _lng }} />
       <InfoWindow marker={initial.activeMarker} visible={initial.showingInfoWindow}>
         <div>
           <h6>{initial.selectedPlace.name}</h6>
