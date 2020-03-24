@@ -7,7 +7,7 @@ footer{
   justify-items: center;
   position: relative;
   color: $color-claro;
-  @include degragadoColor;
+  background-color: $color-primario;
   & > p{
     width: 40%;
     text-align: center;
